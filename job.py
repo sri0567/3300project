@@ -1,5 +1,5 @@
 class Job:
-    def _init_(self, pid, arrival, burst, priority, actual_start, actual_end):
+    def __init__(self, pid, arrival, burst, priority, actual_start, actual_end):
         self.pid = pid
         self.arrival = arrival
         self.burst = burst
@@ -23,7 +23,7 @@ class Job:
         return self.actual_start
 
     def getActualEnd(self):
-        return self.end
+        return self.actual_end
 
     def setPid(self, pid):
         self.pid = pid
@@ -37,8 +37,8 @@ class Job:
     def setPriority(self, priority):
         self.priority = priority
 
-    def setActualStart(self, start):
-        self.actual_start = start
+    def setActualStart(self, actual_start):
+        self.actual_start = actual_start
 
-    def setActualEnd(self, end):
-        self.end = end
+    def setActualEnd(self, actual_end):
+        self.actual_end = actual_end
