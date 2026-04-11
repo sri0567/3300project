@@ -2,6 +2,9 @@ from job import Job
 from calculateMetrics import CalculateMetrics
 from priority import PriorityScheduler
 from roundRobin import roundRobin
+from sjf import sjf
+from fifo import FIFOScheduler
+
 
 class JSONHandler:
     def __init__(self, data):
@@ -41,10 +44,10 @@ class JSONHandler:
             gantt = PriorityScheduler.run(simulation_jobs)
 
         elif self.policy == "FIFO":
-            raise NotImplementedError("Connect your FIFO implementation here.")
+            gantt = FIFOScheduler.run(simulation_jobs)
 
         elif self.policy == "SJF":
-            raise NotImplementedError("Connect your SJF implementation here.")
+            gantt = sjf(simulation_jobs)
 
         else:
             raise ValueError(f"Unsupported policy: {self.policy}")

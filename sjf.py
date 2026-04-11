@@ -1,43 +1,40 @@
 import makeGantt
-from job import Job
+
 
 def sjf(jobs):
-    time=0
+    time = 0
     ganttchart = []
-    ready=[]
+    ready = []
 
-     # sort jobs by arrival time
-    jobs = sorted(jobs, key=lambda j: j.getArrival())
+    # deterministic ordering by arrival, then PID
+    jobs = sorted(jobs, key=lambda j: (j.getArrival(), j.getPid()))
 
     while jobs or ready:
-
         # move arrived jobs to ready queue
         while jobs and jobs[0].getArrival() <= time:
             ready.append(jobs.pop(0))
 
-        
+        # if nothing is ready, CPU is idle until next arrival
         if not ready:
-            time = jobs[0].getArrival()
+            next_arrival = jobs[0].getArrival()
+            if time < next_arrival:
+                ganttchart.append(makeGantt.makeGantt("idle", time, next_arrival))
+            time = next_arrival
             continue
 
-        # sort ready queue by burst time
-        ready.sort(key=lambda j: j.getBurst())
+        # shortest burst first, tie-break by PID
+        ready.sort(key=lambda j: (j.getBurst(), j.getPid()))
 
-        # get shortest job
-        job = ready.pop(0)
+        current = ready.pop(0)
 
         start = time
-        end = time + job.getBurst()
+        end = time + current.getBurst()
 
-        # store start and end times in the object
-        job.setActualStart(start)
-        job.setActualEnd(end)
+        current.setActualStart(start)
+        current.setActualEnd(end)
 
-        # create gantt entry
-        ganttchart.append(makeGantt.makeGantt(job.getPid(), start, end))
+        ganttchart.append(makeGantt.makeGantt(current.getPid(), start, end))
 
-        # update current time
         time = end
 
     return ganttchart
-
