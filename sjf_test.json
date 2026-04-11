@@ -1,0 +1,8 @@
+{
+  "policy": "SJF",
+  "jobs": [
+    { "pid": "A", "arrival": 0, "burst": 7, "priority": 3 },
+    { "pid": "B", "arrival": 0, "burst": 4, "priority": 1 },
+    { "pid": "C", "arrival": 0, "burst": 2, "priority": 2 }
+  ]
+}
