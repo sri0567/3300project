@@ -123,7 +123,7 @@ jsonHandler(dict data)
 - jsonHandler ls the appropriate cpu algorithm and passes it the jobs (and quantum if it's RR)
 ~~~
 jsonHandler(dict data)
-        | ls
+        | calls
         v
 cpuSchedulerAlgorithm(int quantum, dict jobs)
 ~~~
