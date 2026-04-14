@@ -1,6 +1,6 @@
 # CPU Scheduling Simulator
 
-Developers : Daniel Skurvidas, Temirlan Rashid, Mohammad Imaad, Vansh Sakkarwal, Sriram Pragalathan
+**Developers : Daniel Skurvidas, Temirlan Rashid, Mohammad Imaad, Vansh Sakkarwal, Sriram Pragalathan**
 
 A program that simulates OS scheduling algorithms with Python. There are four CPU scheduling algorithms implemented : 
 - FIFO
