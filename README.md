@@ -204,5 +204,5 @@ Tie-breaking is handled deterministically to ensure consistent outputs.
 This guarantees deterministic and reproducible scheduling behavior.
 
 ## AI usage statement
-AI tools (such as ChatGPT) were used to assist with understanding concepts, refining code structure, and improving documentation. All code was reviewed, understood, and adapted by the authors. No code was blindly copied, and full responsibility for correctness and design was maintained.
+AI tools (such as ChatGPT) were used to assist with understanding concepts, refining code structure, and improving documentation. All code was conceptualized, writte, reviewed, understood, and adapted by the authors. No code was blindly copied, and full responsibility for correctness and design was maintained.
 
