@@ -3,6 +3,7 @@ import makeGantt
 
 def roundRobin(quantum, jobs):
     # Deterministic initial ordering
+    # Lexicographically smallest PID used as a tie-breaker
     jobs.sort(key=lambda job: (job.getArrival(), job.getPid()))
 
     gantt = []
