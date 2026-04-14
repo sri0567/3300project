@@ -9,6 +9,8 @@ A program that simulates OS scheduling algorithms with Python. There are four CP
 The main program takes in a JSON file that specifies the scheduling policy and jobs, and outputs the results as a JSON file containing the Gantt chart and performance metrics.
 
 ## Table of Contents
+- [Features](#features)
+- [Test Files](#test-files)
 - [Demo Input and Output](#demo-input-and-output)
 - [Usage](#usage)
 - [Design Decisions](#design-decisions)
@@ -21,6 +23,24 @@ The main program takes in a JSON file that specifies the scheduling policy and j
 - Supports multiple CPU scheduling algorithms
 - JSON-based input and output for easy testing
 - Modular design for extensibility
+
+## Test Files 
+### FIFO
+- input.json
+- output.json
+- fifo_in.json
+- fifo_out.json
+- idle_test.json
+- idle_out.json
+### Priority
+- priority_out.json
+- priority_test.json
+### Round Robin
+- rr_test.json
+- rr_out.json
+### Shortest Job First
+- sjf_test.json
+- sjf_out.json
 
 ## Demo Input and Output
 
