@@ -119,7 +119,7 @@ main.py(JSON data)
 jsonHandler(dict data)
 ~~~
 
-3. jsonHandler.py ls the appropriate scheduling algorithm
+3. jsonHandler.py calls the appropriate scheduling algorithm
 - jsonHandler parses the CPU scheduling algorithm, quantum and jobs from 'data'
 - jsonHandler converts all jobs from 'data' into objects of type job
 - jsonHandler ls the appropriate cpu algorithm and passes it the jobs (and quantum if it's RR)
@@ -206,5 +206,5 @@ Tie-breaking is handled deterministically to ensure consistent outputs.
 This guarantees deterministic and reproducible scheduling behavior.
 
 ## AI usage statement
-AI tools (such as ChatGPT) were used to assist with understanding concepts, refining code structure, and improving documentation. All code was conceptualized, writte, reviewed, understood, and adapted by the authors. No code was blindly copied, and full responsibility for correctness and design was maintained.
+AI tools (such as ChatGPT) were used to assist with understanding concepts, refining code structure, and improving documentation. All code was conceptualized, written, reviewed, understood, and adapted by the authors. No code was blindly copied, and full responsibility for correctness and design was maintained.
 
